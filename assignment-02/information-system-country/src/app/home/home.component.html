@@ -1,0 +1,25 @@
+
+
+<h1>Three Most Populated Countries</h1>
+<div class="card-group">
+  <div *ngFor="let country of countryByPopulation" routerLink="/detail/{{country.id}}" class="card text-white bg-primary mr-auto" style="max-width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{country.name}}</h5>
+      <p class="card-text">({{country.population | number}} people)</p>
+    </div>
+  </div>
+</div>
+
+
+<h1>Three Largest Countries(Area)</h1>
+<div class="card-group">
+  <div *ngFor="let country of countryByArea" routerLink="/detail/{{country.id}}" class="card text-white bg-primary mr-auto" style="max-width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{country.name}}</h5>
+      <p class="card-text">({{country.area | number}} km&#178;)</p>
+    </div>
+  </div>
+</div>
+
+
+
